@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "infoblox-netmri2"
+description = "Provides method bindings to the NetMRI API that are not yet implemented in the `infoblox-netmri` package."
+version = "1.0.0"
+dependencies = [
+    "infoblox-netmri"
+]
+# 3.5 for the typing module, 3.7 for the dataclasses module. 
+requires-python = ">=3.7"
+
+[tool.setuptools]
