@@ -1,9 +1,8 @@
-###########################################################################
-## Export of Script Module: netmri_settings_cred_snmp_v3_grids
-## Language: Python
-## Category: Internal
-## Description: Provides access to the 'Settings Cred SNMP V3 Grids' controller of the NetMRI API.\n\nRequires the 'netmri_paging' and the 'netmri_query' libraries.
-###########################################################################
+"""
+Provides access to the 'Settings Cred SNMP V3 Grids' controller of the NetMRI
+API.
+"""
+
 class _deps:
     import collections.abc
     import dataclasses

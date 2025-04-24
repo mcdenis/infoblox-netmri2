@@ -1,9 +1,7 @@
-###########################################################################
-## Export of Script Module: netmri_query
-## Language: Python
-## Category: Internal
-## Description: Common implementation of NetMRI API wrappers.
-###########################################################################
+"""
+Common implementation of NetMRI API wrappers.
+"""
+
 class _deps:
     import collections.abc
     import inspect

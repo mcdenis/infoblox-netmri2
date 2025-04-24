@@ -1,9 +1,9 @@
-###########################################################################
-## Export of Script Module: netmri_paging
-## Language: Python
-## Category: Internal
-## Description: Provides building blocks for building a Python wrapper of the NetMRI API with convenient paging capabilities.
-###########################################################################
+"""
+Building blocks for a NetMRI API wrapper with paging capabilities (e.g. the
+`Page` class), and utilities for users of afore-mentioned wrappers (e.g.
+`iter_til_end` function.)
+"""
+
 class _deps:
     import collections.abc
     import dataclasses
@@ -100,18 +100,22 @@ def iter_til_end(query_function: _deps.collections.abc.Callable[..., Page[_deps.
     from dataclasses import dataclass
 
     from infoblox_netmri.easy import NetMRIEasy
-    import netmri_settings_cred_cli_grids as cli_creds
-    import netmri_paging
+    import infoblox_netmri2.settings_cred_cli_grids as cli_creds
+    import infoblox_netmri2.paging
 
     @dataclass
     class MyModel:
         Username: str
     
     with NetMRIEasy(...) as easy:
-        all_creds = netmri_paging.iter_til_end(cli_creds.index, MyModel, sort=("Priority",))
+        all_creds = infoblox_netmri2.paging.iter_til_end(
+            cli_creds.index,
+            MyModel,
+            sort=("Priority",)
+        )
         print("These are all the user names in the CLI grid:")
-        print([c.Username for c in all_creds])
-
+        for c in all_creds:
+            print(c.Username)
     ```
     """
     

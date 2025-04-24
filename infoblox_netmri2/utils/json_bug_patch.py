@@ -1,9 +1,8 @@
-###########################################################################
-## Export of Script Module: netmri_json_bug_patch
-## Language: Python
-## Category: Utilities
-## Description: Patch for a querying callable that may raise an apparently random JSON decode error.
-###########################################################################
+"""
+Patch for a NetMRI querying callable that may raise a JSON decode error due to
+an apparent NetMRI bug.
+"""
+
 class _ext:
     import collections.abc
     import json

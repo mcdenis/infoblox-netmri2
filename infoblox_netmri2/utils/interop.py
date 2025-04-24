@@ -1,9 +1,7 @@
-###########################################################################
-## Export of Script Module: interop_utils
-## Language: Python
-## Category: Internal
-## Description: Utilities for building API wrappers.
-###########################################################################
+"""
+Utilities for building API wrappers.
+"""
+
 class _deps:
     import collections.abc
     import inspect
