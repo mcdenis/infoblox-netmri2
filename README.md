@@ -6,6 +6,20 @@ implemented in [`infoblox-netmri`](https://pypi.org/project/infoblox-netmri/).
 It leverages recent Python 3 features (e.g. type annotations) to offer a better
 development experience than the first-party library.
 
+Installation
+------------
+If possible, use the package manager [pip](https://pip.pypa.io/en/stable/) to
+install `infoblox-netmri2`.
+
+```
+pip install git+https://github.com/mcdenis/infoblox-netmri2.git
+```
+
+To install in a NetMRI sandbox without pip, copy the `infoblox_netmri2`
+directory from the root of this repository to the
+`/usr/lib/python3.<x>/site-packages` directory of the NetMRI sandbox (replace
+`<x>` with the minor version of NetMRI's Python installation).
+
 Usage
 -----
 
@@ -38,7 +52,7 @@ with NetMRIEasy(**easy_args) as easy:
       limit=5
     )
 
-    # Print all the usernames.
+    # Print all five usernames.
     for c in cli_creds.items:
         print(c.Username)
 ```
